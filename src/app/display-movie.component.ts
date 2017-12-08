@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Movie } from './Movie'
 
 @Component({
   selector: 'display-movie',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayMovieComponent implements OnInit {
 
-  constructor() { }
+    @Input() movie:Movie
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    getPosterUrl(path:string) {
+        return "http://cdn.collider.com/wp-content/uploads/Iron-Man-3-poster-1.jpg"
+    }
 
 }

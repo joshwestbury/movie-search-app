@@ -1,10 +1,7 @@
 <div class="col s12">
     <input type="text" class="search-input" placeholder="Search a Movie" [(ngModel)] ="search">
     <div class="row">
-        <movie-preview></movie-preview>
-        <movie-preview></movie-preview>
-        <movie-preview></movie-preview>
-        <movie-preview></movie-preview>
+        <movie-preview *ngFor="let movie of searchResults; let i = index" [movie]="movie"></movie-preview>
         <h3 [ngStyle]="{'text-align-center': center}"> No Results Found for {{search}}</h3>
     </div>
 </div>
