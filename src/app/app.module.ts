@@ -8,6 +8,7 @@ import { DisplayMovieComponent } from './display-movie.component';
 import { SearchComponent } from './search/search.component';
 import { MoviePreviewComponent } from './search/movie-preview.component';
 import { FooterComponent } from './footer.component';
+import { MovieService } from './movie.service';
 
 
 
@@ -24,7 +25,7 @@ import { FooterComponent } from './footer.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
