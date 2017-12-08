@@ -1,5 +1,12 @@
 <div class="col s12">
-    <input type="text" class="search-input" placeholder="Search a Movie" [(ngModel)] ="search">
+    <input
+        type="text"
+        class="search-input"
+        placeholder="Search a Movie"
+        [(ngModel)] ="search"
+        (input)="search$.next(search)"
+
+        >
     <div class="row">
         <movie-preview
             *ngFor="let movie of searchResults; let i = index"
