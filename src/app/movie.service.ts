@@ -8,6 +8,9 @@ import { Movie } from './Movie';
 export class MovieService {
 
     private selectedMovie$: Subject<Movie> = new Subject<Movie>()
+    private apiKey:string = "d9b4dd4972ab72d0f3f2414e6d244c2f"
+
+
     constructor() { }
 
     get currentMovie() {
