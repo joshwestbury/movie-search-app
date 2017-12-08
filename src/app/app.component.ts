@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { data } from './mock-data'
-import { Movie } from './Movie'
+import { data } from './mock-data';
+import { Movie } from './Movie';
+import { MovieService } from './movie.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,17 @@ import { Movie } from './Movie'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    currentMovie:Movie = data[0]
+    currentMovie:Movie = null
+
+    constructor(private movieService:MovieService) {
+        movieService
+        .currentMovie
+        .subscribe(movie => {
+            this.currentMovie = movie
+        })
+    }
+
+    startNewSearch() {
+        this.movieService.changeSelectedMovie(null)
+    }
 }
