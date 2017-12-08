@@ -12,6 +12,9 @@
             *ngFor="let movie of searchResults; let i = index"
             (click)="setCurrentMovie(movie)"
             [movie]="movie"></movie-preview>
-        <h3 [ngStyle]="{'text-align-center': center}"> No Results Found for {{search}}</h3>
+        <h3
+            *ngIf="!fetching && searchResults.length === 0 && search.length > 0"
+            [ngStyle]="{'text-align-center': 'center'}"> No Results Found for {{search}}
+        </h3>
     </div>
 </div>

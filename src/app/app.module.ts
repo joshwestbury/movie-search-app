@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-
 import { AppComponent } from './app.component';
+import { HttpClientModule } from  '@angular/common/http';
 import { HeaderComponent } from './header.component';
 import { DisplayMovieComponent } from './display-movie.component';
 import { SearchComponent } from './search/search.component';
@@ -24,6 +24,7 @@ import { MovieService } from './movie.service';
   imports: [
     BrowserModule,
     FormsModule
+    HttpClientModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
