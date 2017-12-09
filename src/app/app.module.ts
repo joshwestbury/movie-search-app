@@ -23,7 +23,7 @@ import { MovieService } from './movie.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
     HttpClientModule
   ],
   providers: [MovieService],

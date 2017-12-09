@@ -5,4 +5,6 @@ export interface Movie {
     overview?:string
     title?:string
     release_date?:string
+    backdropUrl?:string
+    posterUrl?:string
 }

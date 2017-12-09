@@ -11,7 +11,8 @@
         <movie-preview
             *ngFor="let movie of searchResults; let i = index"
             (click)="setCurrentMovie(movie)"
-            [movie]="movie"></movie-preview>
+            [movie]="movie"
+            [index]="i"></movie-preview>
         <h3
             *ngIf="!fetching && searchResults.length === 0 && search.length > 0"
             [ngStyle]="{'text-align-center': 'center'}"> No Results Found for {{search}}
