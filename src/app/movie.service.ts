@@ -64,8 +64,5 @@ export class MovieService {
         //const { backdrop, poster } = this.imageSizes
         const imageSize = isBackdrop ? this.imageSizes.backdrop[0] : this.imageSizes.poster[ this.imageSizes.poster.length - 1 ];
         return `${this.imageBaseUrl}${imageSize}${path}`
-        }
-
     }
-
 }
